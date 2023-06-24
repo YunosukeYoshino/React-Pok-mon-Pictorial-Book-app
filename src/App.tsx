@@ -46,6 +46,7 @@ const App: React.FC = () => {
     await loadPoke(data.results);
     setNextUrl(data.next); //発火したら次のURLを格納
     setPrevUrl(data.previous); //発火したら前のURLを格納
+    window.scrollTo(0, 0);
     setLoading(false); //読み込んだらtrue
   };
 
@@ -57,6 +58,7 @@ const App: React.FC = () => {
     setPrevUrl(data.previous); //発火したら前のURLを格納
 
     await loadPoke(data.results);
+    window.scrollTo(0, 0);
     setLoading(false); //読み込んだらtrue
   };
   return (
