@@ -1,5 +1,6 @@
 import { PokemonData } from "../type";
 import styles from "./Card.module.css";
+
 export const Card = ({ poke }: PokemonData) => {
   return (
     <div className={styles.card}>

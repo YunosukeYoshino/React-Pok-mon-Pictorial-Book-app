@@ -3,8 +3,9 @@ import "./App.css";
 import { getAllPoke, getPoke } from "./utils/pokemon";
 import { Card } from "./components/Card";
 import { PokeArray, PokemonDetails, PokemonResponse } from "./type";
+import { Navvbar } from "./components/Navvbar";
 
-function App() {
+const App: React.FC = () => {
   const initialURL = "https://pokeapi.co/api/v2/pokemon";
   const [loading, setLoading] = useState(true);
   const [pokeData, setPokeData] = useState<PokemonDetails[]>([]);
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <>
+      <Navvbar />
       {loading ? (
         <h1>ローディング中</h1>
       ) : (
@@ -48,6 +50,6 @@ function App() {
       )}
     </>
   );
-}
+};
 
 export default App;
