@@ -1,33 +1,22 @@
-import React from "react";
-
-export const Card = ({ poke }) => {
+import { PokemonData } from "../type";
+import styles from "./Card.module.css";
+export const Card = ({ poke }: PokemonData) => {
   return (
-    <div className="card">
-      <div className="cardImg">
-        <img src={poke.sprites.front_default} alt={poke.name} />
-      </div>
+    <div className={styles.card}>
+      <img src={poke.sprites.front_default} alt={poke.name} />
       <h3 className="cardName">{poke.name}</h3>
-      <div className="cardTypes">
-        <p>タイプ</p>
-        {poke.types.map((type) => {
-          return (
-            <div>
-              <span className="typeName">{type.type.name}</span>
-            </div>
-          );
-        })}
-      </div>
-      <div className="cardInfo">
-        <div className="cardData">
-          <p className="title">重さ: {poke.weight}</p>
-        </div>
-        <div className="cardData">
-          <p className="title">高さ: {poke.height}</p>
-        </div>
-        <div className="cardData">
-          <p className="title">特性: {poke.abilities[0].ability.name}</p>
-        </div>
-      </div>
+      <p>タイプ</p>
+      {poke.types.map((type, i) => {
+        return (
+          <div key={i}>
+            <span className="typeName">{type.type.name}</span>
+          </div>
+        );
+      })}
+
+      <p className="title">おもさ: {poke.weight}</p>
+      <p className="title">たかさ: {poke.height}</p>
+      <p className="title">とくせい: {poke.abilities[0].ability.name}</p>
     </div>
   );
 };
