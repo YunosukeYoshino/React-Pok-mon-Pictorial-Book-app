@@ -1,0 +1,22 @@
+.button {
+  display: block;
+  padding: 15px 32px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  appearance: none;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+.BtnWrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  padding: 2em;
+}
+.button__right {
+  margin-left: auto;
+}

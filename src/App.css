@@ -5,9 +5,18 @@
   margin: 0 auto;
   text-align: center;
 }
+
 body {
   background-image: url(https://images.unsplash.com/photo-1613771404784-3a5686aa2be3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80);
   font-feature-settings: "palt" 1;
+}
+.Loading {
+  font-size: 40px;
+  color: #fff;
+  height: calc(100svh - 3em * 1.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .Card__Contaienr {
   display: grid;
