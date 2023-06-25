@@ -1,7 +1,8 @@
+import React from "react";
 import { PokemonData } from "../type";
 import styles from "./Card.module.css";
 
-export const Card = ({ poke }: PokemonData) => {
+export const Card: React.FC<PokemonData> = ({ poke }) => {
   return (
     <div className={styles.card}>
       <img src={poke.sprites.front_default} alt={poke.name} />

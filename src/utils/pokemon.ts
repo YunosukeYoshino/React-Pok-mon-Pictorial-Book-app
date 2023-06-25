@@ -1,4 +1,8 @@
-export const getAllPoke = (url: RequestInfo | URL) => {
+import { PokemonDetails, PokemonResponse } from "../type";
+
+export const getAllPoke = (
+  url: RequestInfo | URL
+): Promise<PokemonResponse> => {
   return new Promise((resolve, reject) => {
     fetch(url).then((res) => {
       if (res.ok) {
@@ -10,7 +14,7 @@ export const getAllPoke = (url: RequestInfo | URL) => {
   });
 };
 
-export const getPoke = (url: RequestInfo | URL) => {
+export const getPoke = (url: RequestInfo | URL): Promise<PokemonDetails> => {
   return new Promise((resolve, reject) => {
     fetch(url).then((res) => {
       if (res.ok) {
